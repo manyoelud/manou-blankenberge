@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cafe Restaurant Manou — Eten en drinken aan de Grote Markt, Blankenberge</title>
+<meta name="description" content="Café-restaurant Manou aan de Grote Markt van Blankenberge. Steak, grill, vis, pasta en burgers, een ruim terras en parking voor de deur. Grote Markt 31.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Oswald:wght@500;600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--mist:#F6EFE6;--kaart:#FBF7F1;--leisteen:#2A1713;--oker:#B8402A;--oker-d:#94301E;--oker-licht:#F1D3C6;--grijs:#6F5F57;--lijn:#E3D5C8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}html,body{overflow-x:hidden;max-width:100%}
+body{margin:0;background:var(--mist);color:var(--leisteen);font-family:"Instrument Sans",system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}img{display:block;max-width:100%}
+.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.cond,h1,.h2,.koptekst h2,.gerecht h3,.grootwoord,.label b,.band,.twintig b,.score b{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-style:italic}
+.kop{position:fixed;top:0;left:0;right:0;z-index:30;transition:background .35s,box-shadow .35s}
+.kop.vast{background:color-mix(in srgb,var(--mist) 92%,transparent);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--lijn)}
+.kop .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
+.logo{font-family:'Fraunces',serif;font-weight:700;font-style:italic;font-size:30px;text-decoration:none;line-height:1;color:var(--leisteen);white-space:nowrap}
+.menu{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px}
+.menu a{text-decoration:none;opacity:.85}.menu a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+.rechts{display:flex;align-items:center;gap:14px}
+.talen{display:flex;gap:2px;font-size:13px;font-weight:600}
+.talen button{background:none;border:0;padding:6px 7px;border-radius:6px;cursor:pointer;color:var(--grijs);font:inherit}
+.talen button[aria-pressed="true"]{color:var(--leisteen);background:#fff}
+.knop{display:inline-block;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;background:var(--oker);color:#fff;border:1px solid var(--oker);transition:background .2s}
+.knop:hover{background:var(--oker-d);border-color:var(--oker-d)}
+.knop.rand{background:transparent;color:var(--leisteen);border-color:var(--leisteen)}.knop.rand:hover{background:var(--leisteen);color:#fff}
+.knop.klein{padding:9px 16px;font-size:14px}
+@media(max-width:900px){.menu{display:none}}@media(max-width:560px){.kop .knop.klein{display:none}}
+.held{position:relative;min-height:100vh;padding:120px 0 60px;display:flex;align-items:center;overflow:hidden}
+.held .wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;position:relative;z-index:2}
+.achter{position:absolute;left:50%;top:50%;transform:translate(-50%,-52%);font-family:'Fraunces',serif;font-weight:500;font-style:italic;font-size:clamp(130px,20vw,320px);color:rgba(184,64,42,.07);white-space:nowrap;line-height:1;pointer-events:none;z-index:1;clip-path:inset(0 100% 0 0);animation:schrijf 2.2s cubic-bezier(.6,.1,.2,1) .2s forwards}
+@keyframes schrijf{to{clip-path:inset(0 0 0 0)}}
+.sinds{font-size:15px;color:var(--grijs);margin:0 0 14px}
+.held h1{font-size:clamp(44px,6vw,84px);line-height:.95;margin:0;letter-spacing:-.01em}
+.held p.sub{font-size:19px;max-width:32ch;margin:22px 0 0;opacity:.85}
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:8px 14px 8px 11px;border-radius:999px;background:#fff;font-size:15px;color:#1e2328}
+.status i{width:9px;height:9px;border-radius:50%;background:#3faa63;box-shadow:0 0 0 4px rgba(63,170,99,.18)}
+.status.dicht i{background:#d1603d;box-shadow:0 0 0 4px rgba(209,96,61,.18)}
+.knoppen{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.pot{position:relative;justify-self:center;width:min(560px,100%)}
+.pot img{width:100%;height:auto;filter:drop-shadow(0 40px 40px rgba(20,25,30,.28));animation:landt 1.3s cubic-bezier(.2,.8,.2,1) .5s both;will-change:transform}
+@keyframes landt{from{opacity:0;transform:translateY(60px) rotate(-14deg) scale(.9)}to{opacity:1;transform:none}}
+.label{position:absolute;right:2%;bottom:4%;background:var(--leisteen);color:#fff;border-radius:14px;padding:12px 16px;font-size:14px;line-height:1.3;animation:landt 1s .9s both}
+.label b{display:block;font-size:22px}
+@media(max-width:860px){.held{padding-top:100px;min-height:auto}.held .wrap{grid-template-columns:1fr}.pot{width:min(420px,92%);margin-top:10px}.achter{top:62%}}
+.strook{background:var(--leisteen);color:#fff;overflow:hidden;padding:18px 0}
+.band{display:flex;gap:44px;width:max-content;animation:schuif 40s linear infinite;font-size:30px}
+.band span{display:flex;align-items:center;gap:44px;white-space:nowrap}.band i{width:10px;height:10px;border-radius:50%;background:var(--oker);display:inline-block}
+@keyframes schuif{to{transform:translateX(-50%)}}
+section{padding:110px 0}
+.kaartsectie{background:var(--kaart)}
+.koptekst{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:34px}
+.koptekst h2,.h2{font-size:clamp(44px,6vw,76px);line-height:.95;margin:0}
+.koptekst p{margin:0;color:var(--grijs);max-width:44ch}
+@media(max-width:820px){.koptekst{grid-template-columns:1fr;gap:12px}}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;position:sticky;top:80px;z-index:5;background:var(--kaart);padding:10px 0 14px}
+.tabs button{border:1px solid var(--lijn);background:#fff;border-radius:999px;padding:10px 18px;font:600 15px "Instrument Sans",sans-serif;cursor:pointer;color:var(--grijs)}
+.tabs button[aria-selected="true"]{background:var(--leisteen);border-color:var(--leisteen);color:#fff}
+.groep{display:none}.groep.aan{display:block}
+.grootwoord{font-size:clamp(64px,11vw,160px);line-height:.85;color:var(--oker-licht);margin:24px 0 10px}
+.gerechten{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+@media(max-width:900px){.gerechten{grid-template-columns:1fr 1fr}}@media(max-width:560px){.gerechten{grid-template-columns:1fr}}
+.gerecht{background:#fff;border-radius:22px;padding:22px 24px 26px;opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s cubic-bezier(.2,.8,.2,1)}
+.groep.aan .gerecht{opacity:1;transform:none}.groep.aan .gerecht:nth-child(2){transition-delay:.08s}.groep.aan .gerecht:nth-child(3){transition-delay:.16s}
+.gerecht .beeld{height:230px;display:flex;align-items:center;justify-content:center;margin:-6px 0 8px}
+.gerecht .beeld img{max-height:100%;width:auto;filter:drop-shadow(0 18px 22px rgba(20,25,30,.22));transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.gerecht:hover .beeld img{transform:rotate(-6deg) scale(1.06)}
+.gerecht h3{font-size:30px;line-height:1;margin:0 0 8px}.gerecht p{margin:0;color:var(--grijs);font-size:16px}
+.noot{margin:34px 0 0;color:var(--grijs);font-size:15px}
+.terras{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;padding:0;overflow:hidden;background:var(--leisteen)}
+.terras img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.terras::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,18,22,0) 30%,rgba(15,18,22,.82) 100%)}
+.terras .wrap{position:relative;z-index:2;padding:0 0 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+.terras .h2{color:#fff}
+.feiten{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.feiten li{display:grid;grid-template-columns:28px 1fr;gap:12px;font-size:16px}.feiten li strong{display:block}.feiten li span{color:rgba(255,255,255,.75)}
+.feiten svg{width:24px;height:24px;stroke:var(--oker);fill:none;stroke-width:1.7;margin-top:1px}
+@media(max-width:820px){.terras .wrap{grid-template-columns:1fr}}
+.verhaal .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.twintig{position:relative;line-height:.8}
+.twintig b{font-size:clamp(150px,22vw,300px);display:block}
+.twintig .eenheid{position:absolute;right:4%;bottom:-8%;font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(34px,4.5vw,56px);letter-spacing:.04em;text-transform:uppercase;color:var(--oker)}
+.verhaal p{font-size:18px;opacity:.85;max-width:46ch}
+.fotoduo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.fotoduo img{border-radius:16px;aspect-ratio:4/5;object-fit:cover;width:100%}.fotoduo img:last-child{margin-top:40px}
+@media(max-width:820px){.verhaal .wrap{grid-template-columns:1fr;gap:20px}}
+.reviews{background:var(--kaart)}
+.score{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:34px}
+.score b{font-size:96px;line-height:1}.sterren{color:var(--oker);font-size:26px;letter-spacing:3px}.score small{color:var(--grijs);font-size:16px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}@media(max-width:860px){.quotes{grid-template-columns:1fr}}
+blockquote{margin:0;background:#fff;border-radius:22px;padding:28px;font-size:17px;color:#1e2328}blockquote p{margin:0 0 14px}blockquote footer{color:#6b747b;font-size:14px}
+.praktisch .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px}@media(max-width:820px){.praktisch .wrap{grid-template-columns:1fr}}
+.uren{width:100%;border-collapse:collapse;font-size:17px;margin-top:26px}
+.uren td{padding:11px 0;border-bottom:1px solid var(--lijn)}.uren td:last-child{text-align:right}.uren tr.nu td{font-weight:600}.uren td.dicht{color:var(--grijs)}
+.adres{margin:26px 0 0;font-size:18px;line-height:1.7}.adres a{text-decoration:none;border-bottom:1px solid var(--oker)}
+.kaartbox{border-radius:22px;overflow:hidden;min-height:420px;background:#dfe5e8}.kaartbox iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+footer.voet{padding:40px 0;border-top:1px solid var(--lijn)}footer.voet .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--grijs);font-size:14px}
+.belbalk{display:none}
+@media(max-width:720px){.belbalk{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:40}.belbalk .knop{text-align:center;padding:14px 10px;box-shadow:0 10px 30px rgba(20,25,30,.25)}.belbalk .knop.rand{background:#fff;color:#1e2328}body{padding-bottom:84px}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}.reveal.in{opacity:1;transform:none}
+:focus-visible{outline:2px solid var(--oker);outline-offset:3px;border-radius:6px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.achter{clip-path:none}.reveal,.gerecht{opacity:1;transform:none}}
+.pot img.foto{aspect-ratio:4/5;object-fit:cover;border-radius:28px;filter:none;box-shadow:0 40px 70px rgba(20,25,30,.28);transform-origin:center}
+.pot:has(img.foto) img{rotate:2deg}
+.gerecht .beeld img.foto{flex:1 1 100%;align-self:stretch;width:100%;max-width:none;height:100%;max-height:none;object-fit:cover;border-radius:14px;filter:none}
+.gerecht:hover .beeld img.foto{transform:scale(1.03)}
+
+</style>
+</head>
+<body>
+<header class="kop" id="kop"><div class="wrap">
+  <a class="logo" href="#top">Manou</a>
+  <ul class="menu"><li><a href="#kaart" data-t="nav_kaart">De kaart</a></li><li><a href="#terras" data-t="nav_terras">De zaak</a></li><li><a href="#verhaal" data-t="nav_verhaal">Ons verhaal</a></li><li><a href="#praktisch" data-t="nav_uren">Openingsuren</a></li></ul>
+  <div class="rechts"><div class="talen" role="group" aria-label="Taal"><button data-lang="nl">NL</button><button data-lang="fr">FR</button><button data-lang="en">EN</button><button data-lang="de">DE</button></div>
+  <a class="knop klein" href="tel:+32486856541" data-t="bel_kort">Bellen</a></div>
+</div></header>
+<main id="top">
+<section class="held">
+  <div class="achter" aria-hidden="true">Manou</div>
+  <div class="wrap">
+    <div>
+      <p class="sinds" data-t="sinds">Café-restaurant aan de Grote Markt</p>
+      <h1 data-t="held_titel">Even pauzeren aan zee, met een goed bord op tafel.</h1>
+      <p class="sub" data-t="held_sub">Steak, grill, vis, pasta en burgers, midden in Blankenberge, met een ruim terras en parking voor de deur.</p>
+      <div class="status" id="status"><i></i><span>…</span></div>
+      <div class="knoppen"><a class="knop" href="tel:+32486856541" data-t="bel">Bel ons</a><a class="knop rand" href="#kaart" data-t="naar_kaart">Bekijk de kaart</a></div>
+    </div>
+    <div class="pot"><img id="pot" class="foto" src="img/held.jpg" alt="Gegrilde gambas met salade"><div class="label"><b data-t="label_titel">Gegrilde gambas</b><span data-t="label_tekst">Met verse salade</span></div></div>
+  </div>
+</section>
+<div class="strook" aria-hidden="true"><div class="band" id="band"></div></div>
+<section class="kaartsectie" id="kaart"><div class="wrap">
+  <div class="koptekst reveal"><h2 data-t="kaart_titel">De kaart</h2><p data-t="kaart_intro">Een keuken voor een volledige maaltijd, met vlees, vis, pasta en burgers, en iets zoets om af te sluiten.</p></div>
+  <div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-groep="0" data-t="tab0">Keuken</button><button role="tab" aria-selected="false" data-groep="1" data-t="tab1">Burger &amp; pasta</button><button role="tab" aria-selected="false" data-groep="2" data-t="tab2">Zoet &amp; warm</button></div>
+  <div class="groep aan" id="g-0" role="tabpanel"><div class="grootwoord" data-t="tab0">Keuken</div><div class="gerechten"><article class="gerecht"><div class="beeld"><img src="img/g0_0.jpg" class="foto" alt="" loading="lazy"></div><h3 data-t="g0_0">Gemengde grill</h3><p data-t="g0_0_t">Gegrild vlees op een plank, met frietjes, saus en salade.</p></article><article class="gerecht"><div class="beeld"><img src="img/g0_1.jpg" class="foto" alt="" loading="lazy"></div><h3 data-t="g0_1">Steak met champignonsaus</h3><p data-t="g0_1_t">Met een romige champignonsaus, zoals de vaste gasten hem bestellen.</p></article><article class="gerecht"><div class="beeld"><img src="img/g0_2.webp" alt="" loading="lazy"></div><h3 data-t="g0_2">Visfilet</h3><p data-t="g0_2_t">Gebakken vis met kruiden, citroen en salade.</p></article></div></div>
+  <div class="groep" id="g-1" role="tabpanel"><div class="grootwoord" data-t="tab1">Burger &amp; pasta</div><div class="gerechten"><article class="gerecht"><div class="beeld"><img src="img/g1_0.jpg" class="foto" alt="" loading="lazy"></div><h3 data-t="g1_0">Burger</h3><p data-t="g1_0_t">Met kaas en frietjes, op een houten plank.</p></article><article class="gerecht"><div class="beeld"><img src="img/g1_1.jpg" class="foto" alt="" loading="lazy"></div><h3 data-t="g1_1">Spaghetti</h3><p data-t="g1_1_t">Met saus en veel geraspte kaas.</p></article><article class="gerecht"><div class="beeld"><img src="img/g1_2.jpg" class="foto" alt="" loading="lazy"></div><h3 data-t="g1_2">Pasta met scampi</h3><p data-t="g1_2_t">Verse pasta met tomaat en scampi.</p></article></div></div>
+  <div class="groep" id="g-2" role="tabpanel"><div class="grootwoord" data-t="tab2">Zoet &amp; warm</div><div class="gerechten"><article class="gerecht"><div class="beeld"><img src="img/g2_0.webp" alt="" loading="lazy"></div><h3 data-t="g2_0">Warme koffie met slagroom</h3><p data-t="g2_0_t">In een hoog glas, bij het dessert of tussendoor.</p></article></div></div>
+  <p class="noot" data-t="noot">Vraag naar de volledige kaart en de dagsuggesties.</p>
+</div></section>
+<section class="terras" id="terras"><img src="img/terras.jpg" alt="" loading="lazy">
+  <div class="wrap"><div class="reveal"><h2 class="h2" data-t="terras_titel">Een terras om te blijven zitten.</h2><p data-t="terras_tekst" style="max-width:44ch;font-size:18px;color:rgba(255,255,255,.85)">Op de Grote Markt, met de winkelstraten om de hoek en de dijk en het strand op wandelafstand. Binnen een lange, lichte zaal.</p></div>
+  <ul class="feiten reveal"><li><svg viewBox="0 0 24 24"><path d="M12 3c-3 4-5 6-5 9a5 5 0 0 0 10 0c0-3-2-5-5-9z"/></svg><div><strong data-t="f0">Ruim terras</strong><span data-t="f0_t">Heerlijk op zonnige dagen.</span></div></li><li><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg><div><strong data-t="f1">Parking voor de deur</strong><span data-t="f1_t">Dijk en strand zijn te voet te bereiken.</span></div></li><li><svg viewBox="0 0 24 24"><path d="M9 14V7h5l3 5h3M6 7h3"/></svg><div><strong data-t="f2">Rolstoeltoegankelijk</strong><span data-t="f2_t">Ingang, zitplaatsen, toilet en parking.</span></div></li></ul></div>
+</section>
+<section class="verhaal" id="verhaal"><div class="wrap">
+  <div class="twintig reveal"><b id="getal">390</b><span class="eenheid" data-t="eenheid">reviews</span></div>
+  <div class="reveal"><h2 class="h2" data-t="verhaal_titel">Midden in Blankenberge</h2><p data-t="verhaal_tekst">Het ideale adres om even te pauzeren tijdens uw verblijf aan zee. Centraal op de Grote Markt, met parking voor de deur en vriendelijke bediening.</p>
+  <div class="fotoduo"><img src="img/verhaal1.jpg" alt="" loading="lazy"><img src="img/verhaal2.jpg" alt="" loading="lazy"></div></div>
+</div></section>
+<section class="reviews"><div class="wrap">
+  <div class="score reveal"><b>4,2</b><span class="sterren">★★★★☆</span><small data-t="reviews_onder">op Google, bij 390 beoordelingen</small></div>
+  <div class="quotes reveal"><blockquote><p>“Mooie locatie, zeer vriendelijke en klassevolle bediening, steak bleu-chaud perfect gebakken, stoofvlees smelt in de mond, frietjes lekker knapperig, goed rood huiswijntje. Zeer tevreden.”</p><footer>Erna, Google</footer></blockquote><blockquote><p>“Heerlijk gegeten! De steak was perfect gebakken en heel erg mals. Vriendelijke en snelle bediening. Prijs-kwaliteit echt dik in orde.”</p><footer>Tatjana, Google</footer></blockquote><blockquote><p>“Bij verblijf in B.berge is dit ons vast restaurant. Alles is top. Elk jaar komen wij hier meerdere keren terug.”</p><footer>Johan, Google</footer></blockquote></div>
+</div></section>
+<section class="praktisch" id="praktisch"><div class="wrap">
+  <div class="reveal"><h2 class="h2" data-t="uren_titel">Openingsuren</h2><table class="uren" id="uren"></table>
+  <p class="adres">Grote Markt 31, 8370 Blankenberge<br><a href="tel:+32486856541">+32 486 85 65 41</a><br><span data-t="uren_noot">Zondag gesloten. Voor groepen en grote gezelschappen: bel even.</span></p></div>
+  <div class="kaartbox"><iframe title="Cafe Restaurant Manou" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Cafe+Restaurant+Manou%2C+Grote+Markt+31%2C+8370+Blankenberge&amp;output=embed"></iframe></div>
+</div></section>
+</main>
+<footer class="voet"><div class="wrap"><span>© Cafe Restaurant Manou, Blankenberge</span><span>Grote Markt 31 · +32 486 85 65 41</span></div></footer>
+<div class="belbalk"><a class="knop" href="tel:+32486856541" data-t="bel_kort">Bellen</a><a class="knop rand" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+Restaurant+Manou&amp;query_place_id=ChIJu3hPgX2qxEcRNhyGL0DFh5Q" data-t="route">Route</a></div>
+<script>
+var T = {"nl": {"g0_0": "Gemengde grill", "g0_0_t": "Gegrild vlees op een plank, met frietjes, saus en salade.", "g0_1": "Steak met champignonsaus", "g0_1_t": "Met een romige champignonsaus, zoals de vaste gasten hem bestellen.", "g0_2": "Visfilet", "g0_2_t": "Gebakken vis met kruiden, citroen en salade.", "tab0": "Keuken", "g1_0": "Burger", "g1_0_t": "Met kaas en frietjes, op een houten plank.", "g1_1": "Spaghetti", "g1_1_t": "Met saus en veel geraspte kaas.", "g1_2": "Pasta met scampi", "g1_2_t": "Verse pasta met tomaat en scampi.", "tab1": "Burger & pasta", "g2_0": "Warme koffie met slagroom", "g2_0_t": "In een hoog glas, bij het dessert of tussendoor.", "tab2": "Zoet & warm", "f0": "Ruim terras", "f0_t": "Heerlijk op zonnige dagen.", "f1": "Parking voor de deur", "f1_t": "Dijk en strand zijn te voet te bereiken.", "f2": "Rolstoeltoegankelijk", "f2_t": "Ingang, zitplaatsen, toilet en parking.", "nav_kaart": "De kaart", "nav_terras": "De zaak", "nav_verhaal": "Ons verhaal", "nav_uren": "Openingsuren", "bel_kort": "Bellen", "bel": "Bel ons", "naar_kaart": "Bekijk de kaart", "kaart_titel": "De kaart", "uren_titel": "Openingsuren", "route": "Route", "sinds": "Café-restaurant aan de Grote Markt", "held_titel": "Even pauzeren aan zee, met een goed bord op tafel.", "held_sub": "Steak, grill, vis, pasta en burgers, midden in Blankenberge, met een ruim terras en parking voor de deur.", "label_titel": "Gegrilde gambas", "label_tekst": "Met verse salade", "kaart_intro": "Een keuken voor een volledige maaltijd, met vlees, vis, pasta en burgers, en iets zoets om af te sluiten.", "noot": "Vraag naar de volledige kaart en de dagsuggesties.", "terras_titel": "Een terras om te blijven zitten.", "terras_tekst": "Op de Grote Markt, met de winkelstraten om de hoek en de dijk en het strand op wandelafstand. Binnen een lange, lichte zaal.", "verhaal_titel": "Midden in Blankenberge", "verhaal_tekst": "Het ideale adres om even te pauzeren tijdens uw verblijf aan zee. Centraal op de Grote Markt, met parking voor de deur en vriendelijke bediening.", "eenheid": "reviews", "reviews_onder": "op Google, bij 390 beoordelingen", "uren_noot": "Zondag gesloten. Voor groepen en grote gezelschappen: bel even.", "dagen": ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"], "gesloten": "Gesloten", "nu_open": "Nu open · vandaag tot ", "open_vanaf": "Vandaag open vanaf ", "nu_dicht": "Nu gesloten · ", "morgen": "morgen", "vanaf": " open vanaf ", "band": ["Gemengde grill", "Steak met champignonsaus", "Visfilet", "Burger", "Spaghetti", "Pasta met scampi", "Warme koffie met slagroom"]}, "fr": {"g0_0": "Grill mixte", "g0_0_t": "Viandes grillées sur planche, avec frites, sauce et salade.", "g0_1": "Steak sauce champignons", "g0_1_t": "Avec une sauce crémeuse aux champignons.", "g0_2": "Filet de poisson", "g0_2_t": "Poisson poêlé aux herbes, citron et salade.", "tab0": "Cuisine", "g1_0": "Burger", "g1_0_t": "Au fromage, avec frites, sur une planche en bois.", "g1_1": "Spaghetti", "g1_1_t": "Avec sauce et beaucoup de fromage râpé.", "g1_2": "Pâtes aux scampi", "g1_2_t": "Pâtes fraîches, tomate et scampi.", "tab1": "Burger & pâtes", "g2_0": "Café chaud à la chantilly", "g2_0_t": "Dans un grand verre, avec le dessert ou entre-temps.", "tab2": "Sucré & chaud", "f0": "Grande terrasse", "f0_t": "Idéale les jours de soleil.", "f1": "Parking devant la porte", "f1_t": "La digue et la plage sont à deux pas.", "f2": "Accessible en fauteuil", "f2_t": "Entrée, places assises, toilettes et parking.", "nav_kaart": "La carte", "nav_terras": "Le lieu", "nav_verhaal": "Notre histoire", "nav_uren": "Horaires", "bel_kort": "Appeler", "bel": "Appelez-nous", "naar_kaart": "Voir la carte", "kaart_titel": "La carte", "uren_titel": "Horaires", "route": "Itinéraire", "sinds": "Café-restaurant sur la Grote Markt", "held_titel": "Une pause à la mer, avec une bonne assiette sur la table.", "held_sub": "Steak, grill, poisson, pâtes et burgers, au cœur de Blankenberge, avec une grande terrasse et un parking devant la porte.", "label_titel": "Gambas grillées", "label_tekst": "Avec salade fraîche", "kaart_intro": "Une cuisine pour un vrai repas, avec viande, poisson, pâtes et burgers, et une touche sucrée pour finir.", "noot": "Demandez la carte complète et les suggestions du jour.", "terras_titel": "Une terrasse où l’on reste volontiers.", "terras_tekst": "Sur la Grote Markt, avec les rues commerçantes au coin et la digue et la plage à pied. À l’intérieur, une longue salle lumineuse.", "verhaal_titel": "Au cœur de Blankenberge", "verhaal_tekst": "L’adresse idéale pour une pause pendant votre séjour à la mer. Au centre, sur la Grote Markt, avec parking devant la porte et un service aimable.", "eenheid": "avis", "reviews_onder": "sur Google, 390 avis", "uren_noot": "Fermé le dimanche. Pour les groupes : appelez-nous.", "dagen": ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"], "gesloten": "Fermé", "nu_open": "Ouvert · aujourd’hui jusqu’à ", "open_vanaf": "Ouvert aujourd’hui dès ", "nu_dicht": "Fermé · ", "morgen": "demain", "vanaf": " ouvert dès ", "band": ["Grill mixte", "Steak sauce champignons", "Filet de poisson", "Burger", "Spaghetti", "Pâtes aux scampi", "Café chaud à la chantilly"]}, "en": {"g0_0": "Mixed grill", "g0_0_t": "Grilled meats on a board, with fries, sauce and salad.", "g0_1": "Steak with mushroom sauce", "g0_1_t": "With a creamy mushroom sauce.", "g0_2": "Fish fillet", "g0_2_t": "Pan-fried fish with herbs, lemon and salad.", "tab0": "Kitchen", "g1_0": "Burger", "g1_0_t": "With cheese and fries, on a wooden board.", "g1_1": "Spaghetti", "g1_1_t": "With sauce and plenty of grated cheese.", "g1_2": "Pasta with scampi", "g1_2_t": "Fresh pasta with tomato and scampi.", "tab1": "Burger & pasta", "g2_0": "Hot coffee with whipped cream", "g2_0_t": "In a tall glass, with dessert or just on its own.", "tab2": "Sweet & warm", "f0": "Spacious terrace", "f0_t": "Lovely on sunny days.", "f1": "Parking at the door", "f1_t": "The seafront and beach are within walking distance.", "f2": "Wheelchair accessible", "f2_t": "Entrance, seating, toilet and parking.", "nav_kaart": "Menu", "nav_terras": "The place", "nav_verhaal": "Our story", "nav_uren": "Opening hours", "bel_kort": "Call us", "bel": "Call us", "naar_kaart": "See the menu", "kaart_titel": "The menu", "uren_titel": "Opening hours", "route": "Directions", "sinds": "Café-restaurant on the Grote Markt", "held_titel": "A break by the sea, with a good plate on the table.", "held_sub": "Steak, grill, fish, pasta and burgers, in the heart of Blankenberge, with a spacious terrace and parking at the door.", "label_titel": "Grilled king prawns", "label_tekst": "With fresh salad", "kaart_intro": "A kitchen for a full meal, with meat, fish, pasta and burgers, and something sweet to finish.", "noot": "Ask for the full menu and the daily suggestions.", "terras_titel": "A terrace to linger on.", "terras_tekst": "On the Grote Markt, with the shopping streets around the corner and the seafront and beach within walking distance. Inside, a long, bright room.", "verhaal_titel": "In the heart of Blankenberge", "verhaal_tekst": "The ideal place for a break during your stay by the sea. Central, on the Grote Markt, with parking at the door and friendly service.", "eenheid": "reviews", "reviews_onder": "on Google, from 390 reviews", "uren_noot": "Closed on Sundays. For groups and larger parties: give us a call.", "dagen": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "gesloten": "Closed", "nu_open": "Open now · today until ", "open_vanaf": "Opens today at ", "nu_dicht": "Closed now · ", "morgen": "tomorrow", "vanaf": " opens at ", "band": ["Mixed grill", "Steak with mushroom sauce", "Fish fillet", "Burger", "Spaghetti", "Pasta with scampi", "Hot coffee with whipped cream"]}, "de": {"g0_0": "Gemischter Grill", "g0_0_t": "Gegrilltes Fleisch auf dem Brett, mit Pommes, Soße und Salat.", "g0_1": "Steak mit Pilzsoße", "g0_1_t": "Mit cremiger Pilzsoße.", "g0_2": "Fischfilet", "g0_2_t": "Gebratener Fisch mit Kräutern, Zitrone und Salat.", "tab0": "Küche", "g1_0": "Burger", "g1_0_t": "Mit Käse und Pommes, auf einem Holzbrett.", "g1_1": "Spaghetti", "g1_1_t": "Mit Soße und reichlich geriebenem Käse.", "g1_2": "Pasta mit Scampi", "g1_2_t": "Frische Pasta mit Tomate und Scampi.", "tab1": "Burger & Pasta", "g2_0": "Heißer Kaffee mit Sahne", "g2_0_t": "Im hohen Glas, zum Dessert oder zwischendurch.", "tab2": "Süß & warm", "f0": "Große Terrasse", "f0_t": "Herrlich an sonnigen Tagen.", "f1": "Parkplatz vor der Tür", "f1_t": "Deich und Strand sind zu Fuß erreichbar.", "f2": "Rollstuhlgerecht", "f2_t": "Eingang, Sitzplätze, Toilette und Parkplatz.", "nav_kaart": "Die Karte", "nav_terras": "Das Lokal", "nav_verhaal": "Unsere Geschichte", "nav_uren": "Öffnungszeiten", "bel_kort": "Anrufen", "bel": "Rufen Sie uns an", "naar_kaart": "Zur Karte", "kaart_titel": "Die Karte", "uren_titel": "Öffnungszeiten", "route": "Route", "sinds": "Café-Restaurant am Grote Markt", "held_titel": "Eine Pause am Meer, mit einem guten Teller auf dem Tisch.", "held_sub": "Steak, Grill, Fisch, Pasta und Burger, mitten in Blankenberge, mit großer Terrasse und Parkplatz vor der Tür.", "label_titel": "Gegrillte Gambas", "label_tekst": "Mit frischem Salat", "kaart_intro": "Eine Küche für eine ganze Mahlzeit, mit Fleisch, Fisch, Pasta und Burgern und etwas Süßem zum Abschluss.", "noot": "Fragen Sie nach der vollständigen Karte und den Tagesempfehlungen.", "terras_titel": "Eine Terrasse zum Verweilen.", "terras_tekst": "Am Grote Markt, mit den Einkaufsstraßen um die Ecke und Deich und Strand zu Fuß erreichbar. Drinnen ein langer, heller Saal.", "verhaal_titel": "Mitten in Blankenberge", "verhaal_tekst": "Die ideale Adresse für eine Pause während Ihres Aufenthalts am Meer. Zentral am Grote Markt, mit Parkplatz vor der Tür und freundlichem Service.", "eenheid": "Bewertungen", "reviews_onder": "auf Google, aus 390 Bewertungen", "uren_noot": "Sonntags geschlossen. Für Gruppen und größere Gesellschaften: bitte kurz anrufen.", "dagen": ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"], "gesloten": "Geschlossen", "nu_open": "Jetzt geöffnet · heute bis ", "open_vanaf": "Heute geöffnet ab ", "nu_dicht": "Jetzt geschlossen · ", "morgen": "morgen", "vanaf": " geöffnet ab ", "band": ["Gemischter Grill", "Steak mit Pilzsoße", "Fischfilet", "Burger", "Spaghetti", "Pasta mit Scampi", "Heißer Kaffee mit Sahne"]}};
+var UREN = {"1": ["10:00", "21:00"], "2": ["10:00", "21:00"], "3": ["10:00", "21:00"], "4": ["10:00", "21:00"], "5": ["09:00", "21:00"], "6": ["11:00", "21:00"], "0": null};
+var getalDoel = 390;
+var taal = ""; try { taal = localStorage.getItem("taal_manou") || ""; } catch(e) {}
+if (!T[taal]) { var n = (navigator.language || "nl").slice(0,2); taal = T[n] ? n : "nl"; }
+function min(s){ var p = s.split(":"); return +p[0]*60 + +p[1]; }
+function zet(l){
+  var t = T[l]; document.documentElement.lang = l;
+  document.querySelectorAll("[data-t]").forEach(function(el){ var k = el.getAttribute("data-t"); if (typeof t[k] === "string") el.textContent = t[k]; });
+  document.querySelectorAll(".talen button").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.lang === l ? "true" : "false"); });
+  var html = "", nu = new Date(), d = nu.getDay(), tm = nu.getHours()*60 + nu.getMinutes();
+  [1,2,3,4,5,6,0].forEach(function(i){ var u = UREN[i], dag = t.dagen[i]; dag = dag.charAt(0).toUpperCase() + dag.slice(1);
+    html += "<tr" + (i===d ? ' class="nu"' : "") + "><td>" + dag + "</td><td" + (u ? "" : ' class="dicht"') + ">" + (u ? u[0] + " – " + u[1] : t.gesloten) + "</td></tr>"; });
+  document.getElementById("uren").innerHTML = html;
+  var st = document.getElementById("status"), sp = st.querySelector("span"), u = UREN[d]; st.classList.remove("dicht");
+  if (u && tm >= min(u[0]) && tm < min(u[1])) sp.textContent = t.nu_open + u[1];
+  else { st.classList.add("dicht"); var v = (d+1)%7, k = 1; while (!UREN[v] && k < 7) { v = (v+1)%7; k++; }
+    sp.textContent = (u && tm < min(u[0])) ? t.open_vanaf + u[0] : (UREN[v] ? t.nu_dicht + (k===1 ? t.morgen : t.dagen[v]) + t.vanaf + UREN[v][0] : t.gesloten); }
+  var rij = t.band.map(function(g){ return "<span>" + g + "<i></i></span>"; }).join("");
+  document.getElementById("band").innerHTML = rij + rij;
+  try { localStorage.setItem("taal_manou", l); } catch(e) {}
+}
+document.querySelectorAll(".talen button").forEach(function(b){ b.addEventListener("click", function(){ zet(b.dataset.lang); }); });
+zet(taal);
+document.querySelectorAll(".tabs button").forEach(function(b){ b.addEventListener("click", function(){
+  document.querySelectorAll(".tabs button").forEach(function(x){ x.setAttribute("aria-selected", x===b ? "true" : "false"); });
+  document.querySelectorAll(".groep").forEach(function(g){ g.classList.remove("aan"); });
+  var g = document.getElementById("g-" + b.dataset.groep); void g.offsetWidth; g.classList.add("aan"); }); });
+var rm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, {threshold:.15});
+document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+var kop = document.getElementById("kop"), pot = document.getElementById("pot"), achter = document.querySelector(".achter");
+function scroll(){ var y = window.scrollY; kop.classList.toggle("vast", y > 30);
+  if (!rm && y < window.innerHeight * 1.2) { pot.style.transform = "translateY(" + (y*0.18) + "px) rotate(" + (y*0.03) + "deg)"; achter.style.marginLeft = (-y*0.25) + "px"; } }
+window.addEventListener("scroll", scroll, {passive:true}); scroll();
+var gt = document.getElementById("getal"), geteld = false;
+if (getalDoel && !rm) new IntersectionObserver(function(es){ if (es[0].isIntersecting && !geteld) { geteld = true; var t0 = performance.now(), van = 0;
+  (function tik(nu){ var k = Math.min(1, (nu-t0)/1600), e = 1 - Math.pow(1-k, 3); gt.textContent = Math.round(van + e*(getalDoel-van)) + ""; if (k < 1) requestAnimationFrame(tik); })(t0); } }, {threshold:.5}).observe(gt);
+</script>
+</body>
+</html>
